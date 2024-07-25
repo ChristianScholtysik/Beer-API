@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2vw;
+  margin: 0, 10rem;
+}
+
+.overview {
+  background-image: url("/public/jon-tyson-s2ryvZkG1Rk-unsplash.jpg");
+}
+
+img {
+  display: flex;
+}
+
+.bg-header {
+  background: url("/public/wp3087080.jpg ") center center no-repeat;
+  background-attachment: fixed;
+}
+
+.random {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30vh;
+}
+
+.home {
+}
+.btn-homer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Simpsons";
+}
+
+.btn-homer img {
+  height: 8vh;
+}
+
+@font-face {
+  font-family: "Simpsons";
+  src: url("/public/simpsonfont/Simpsonfont\ DEMO.otf");
+}
