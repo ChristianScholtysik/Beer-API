@@ -7,9 +7,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 .list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2vw;
   margin: 0, 10rem;
 }
@@ -31,7 +32,16 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30vh;
+}
+
+.random-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("/public/HD-wallpaper-beer-cans-alcohol-beverage-cool-drinks-new.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .home {

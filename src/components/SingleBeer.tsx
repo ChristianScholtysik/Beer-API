@@ -23,7 +23,7 @@ const SingleBeer: React.FC<IBeerProps> = (props) => {
             </div>
           </div>
         </div> */}
-        <div className="card bg-stone-100 w-96 shadow-xl ">
+        {/* <div className="card bg-stone-100 w-96 shadow-xl ">
           <figure>
             <img
               src={props.beer.image}
@@ -39,6 +39,23 @@ const SingleBeer: React.FC<IBeerProps> = (props) => {
               <button className="btn  bg-lime-900 border-none text-white">
                 Read More
               </button>
+            </div>
+          </div>
+        </div> */}
+        <div className="card card-side bg-stone-100 shadow-xl">
+          <figure>
+            <img
+              src={props.beer.image}
+              alt={props.beer.name}
+              className="my-8"
+              onError={(e) => (e.currentTarget.src = defaultImage)}
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">{props.beer.name}</h2>
+            <p>{props.beer.price}</p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-warning">Details</button>
             </div>
           </div>
         </div>

@@ -24,31 +24,53 @@ const RandomBeerDetailPage = () => {
   }, []);
 
   return (
-    <div className="random">
-      <div className="card glass w-96">
-        <figure>
-          <img
-            className="my-8"
-            src={randomBeer?.image}
-            onError={(e) => (e.currentTarget.src = defaultImage)}
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">{randomBeer?.name}</h2>
-          <p>Rating: {randomBeer?.rating.average.toFixed(2)}</p>
-          <p>Reviews: {randomBeer?.rating.reviews.toFixed(2)}</p>
-          <h5>Price: {randomBeer?.price}</h5>
+    <section className="random-wrapper">
+      <div className="random flex items-center justify-center">
+        <div className="card bg-slate-100 max-w-xl flex-grow  items-center ">
+          <figure>
+            <img
+              className="my-8"
+              src={randomBeer?.image}
+              onError={(e) => (e.currentTarget.src = defaultImage)}
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title text-slate-800 text-4xl font-serif">
+              {randomBeer?.name}
+            </h2>
+            <div className="divider divider-warning text-slate-800 font-bold mt-4 mb-4">
+              Infos
+            </div>
+            <p className="text-slate-800 italic">
+              "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Delectus culpa accusantium adipisci perferendis ab eveniet
+              deleniti incidunt quam porro mollitia. Voluptatibus alias incidunt
+              quaerat necessitatibus culpa, vel asperiores commodi maxime?""
+            </p>
+            <div className="divider divider-warning text-slate-800 mt-8 mb-12">
+              Rating
+            </div>
+            <p className="text-slate-800 font-bold text-3xl font-serif">
+              Rating: {randomBeer?.rating.average.toFixed(2)}
+            </p>
+            <p className="text-slate-800 text-xl mb-6">
+              Reviews: {randomBeer?.rating.reviews.toFixed(2)}
+            </p>
+            <div className="card bg-warning rounded-box grid h-20 flex-grow place-items-center text-white text-3xl font-bold font-serif">
+              Price: {randomBeer?.price}
+            </div>
 
-          <div className="card-actions justify-end">
-            <Link to="/">
-              <button className="btn  bg-lime-900 border-none text-white">
-                Back
-              </button>
-            </Link>
+            <div className="card-actions justify-center">
+              <Link to="/">
+                <button className="btn  bg-orange-900 border-none text-white">
+                  Back
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
