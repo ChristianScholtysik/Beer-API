@@ -4,7 +4,7 @@ import { IBeer } from "../IBeer";
 
 const Home = () => {
   const [randomBeerData, setRandomBeerData] = useState<IBeer[] | null>(null);
-  const [randomBeer, setRandomBeer] = useState<IBeer | null>(null);
+  const [_randomBeer, setRandomBeer] = useState<IBeer | null>(null);
 
   const getRandomBeer = () => {
     if (randomBeerData) {

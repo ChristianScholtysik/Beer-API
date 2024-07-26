@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { IBeer } from "../IBeer";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const RandomBeerDetailPage = () => {
   const defaultImage = "/public/8979036078110.png";
-  const [randomBeerData, setrandomBeerData] = useState<IBeer[] | null>(null);
+  const [_randomBeerData, setrandomBeerData] = useState<IBeer[] | null>(null);
   const [randomBeer, setRandomBeer] = useState<IBeer | null>(null);
 
   useEffect(() => {
@@ -54,7 +54,7 @@ const RandomBeerDetailPage = () => {
               Rating: {randomBeer?.rating.average.toFixed(2)}
             </p>
             <p className="text-slate-800 text-2xl mb-12">
-              Reviews: {randomBeer?.rating.reviews.toFixed(2)}
+              Reviews: {randomBeer?.rating.reviews}
             </p>
             <div className="card bg-orange-400 rounded-box grid h-20 flex-grow place-items-center text-white text-2xl font-bold">
               Price: {randomBeer?.price}

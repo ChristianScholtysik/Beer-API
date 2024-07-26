@@ -3,7 +3,7 @@ import { IBeer } from "../IBeer";
 import SingleBeer from "./SingleBeer";
 
 const RandomBeer = () => {
-  const [randomBeerData, setrandomBeerData] = useState<IBeer[] | null>(null);
+  const [_randomBeerData, setrandomBeerData] = useState<IBeer[] | null>(null);
   const [randomBeer, setRandomBeer] = useState<IBeer | null>(null);
 
   useEffect(() => {

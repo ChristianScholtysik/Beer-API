@@ -16,11 +16,14 @@ const BeerDetailPage = () => {
   }, [id]);
 
   const defaultImage = "/public/8979036078110.png";
-  const average = Number(beerDataDetail?.rating.average.toFixed(1));
-  // const firstNumber = Math.floor(average);
-  // console.log("Rating:", firstNumber);
 
-  const StarRating = ({ average }) => {
+  const average: number = Number(beerDataDetail?.rating.average.toFixed(1));
+
+  interface StarRatingProps {
+    average: number;
+  }
+
+  const StarRating: React.FC<StarRatingProps> = ({ average }) => {
     const filledStars = Math.floor(average);
     const hasHalfStar = average % 1 >= 0.5;
     const emptyStars = 5 - filledStars - (hasHalfStar ? 1 : 0);
