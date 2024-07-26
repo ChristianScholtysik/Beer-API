@@ -91,7 +91,7 @@ const BeerDetailPage = () => {
   return (
     <>
       <div className="hero hero-detail min-h-screen ">
-        <div className="hero-content bg-stone-900 text-center hero-overlay bg-opacity-90 min-w-full">
+        <div className="hero-content bg-stone-900 text-center hero-overlay bg-opacity-80 min-w-full">
           <div className="max-w-lg flex-col justify-center items-center img-wrapper">
             <img
               src={beerDataDetail?.image}
@@ -119,18 +119,18 @@ const BeerDetailPage = () => {
             </p>
             <h2 className="mb-8 text-3xl">Price: {beerDataDetail?.price}</h2>
             <div>
-              <button className="btn btn-outline btn-warning mx-4 .">
-                Buy Now
-              </button>
+              {" "}
+              <Link to="/">
+                <button className="btn btn-outline btn-warning mx-4 .">
+                  Buy Now
+                </button>{" "}
+              </Link>
               <Link to="/ale">
                 <button className="btn btn-outline btn-warning mx-4 .">
                   Back to Overview
                 </button>
               </Link>
             </div>
-            {/* <Link to="/">
-              <button className="btn btn-primary mx-4 .">Back to Start</button>
-            </Link> */}
           </div>
         </div>
       </div>
