@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { IBeer } from "../IBeer";
 import { Link, useParams } from "react-router-dom";
 import DefaultImage from "../../public/8979036078110.png";
+import "../../public/green_beer.jpeg";
 
 const BeerDetailPage = () => {
   const [beerDataDetail, setBeerDataDetail] = useState<IBeer | null>(null);
