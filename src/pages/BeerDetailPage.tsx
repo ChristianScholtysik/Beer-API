@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { IBeer } from "../IBeer";
 import { Link, useParams } from "react-router-dom";
-import "../../public/8979036078110.png";
+import DefaultImage from "../../public/8979036078110.png";
 
 const BeerDetailPage = () => {
   const [beerDataDetail, setBeerDataDetail] = useState<IBeer | null>(null);
@@ -16,7 +16,7 @@ const BeerDetailPage = () => {
       .catch((err) => console.error("Fehler Detail page", err));
   }, [id]);
 
-  const defaultImage = "/public/8979036078110.png";
+  const defaultImage = DefaultImage;
 
   const average: number = Number(beerDataDetail?.rating.average.toFixed(1));
 

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { IBeer } from "../IBeer";
 import { Link } from "react-router-dom";
+import DefaultImage from "../../public/8979036078110.png";
 
 const RandomBeerDetailPage = () => {
-  const defaultImage = "/public/8979036078110.png";
+  const defaultImage = DefaultImage;
   const [_randomBeerData, setrandomBeerData] = useState<IBeer[] | null>(null);
   const [randomBeer, setRandomBeer] = useState<IBeer | null>(null);
 

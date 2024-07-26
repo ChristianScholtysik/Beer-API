@@ -1,37 +1,16 @@
 import { Link } from "react-router-dom";
 import { IBeer } from "../IBeer";
-import "../../public/8979036078110.png";
+import DefaultImage from "../../public/8979036078110.png";
 
 interface IBeerProps {
   beer: IBeer;
 }
 
 const SingleBeer: React.FC<IBeerProps> = (props) => {
-  const defaultImage = "/public/8979036078110.png";
+  const defaultImage = DefaultImage;
   return (
     <>
       <Link to={`/ale/${props.beer.id}`} className="item">
-        {/* <div className="card card-side bg-stone-100 shadow-xl ">
-          <figure className="ml-4">
-            <img
-              src={props.beer.image}
-              alt={props.beer.name}
-              className="my-8"
-              onError={(e) => (e.currentTarget.src = defaultImage)}
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title text-orange-900 ">{props.beer.name}</h2>
-            <p className="text-orange-900">{props.beer.price}</p>
-            <p className="text-orange-900 font text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-              quaerat quasi aut porro architecto quis.
-            </p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-warning">Details</button>
-            </div>
-          </div>
-        </div> */}
         <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
           <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40 img-overview">
             <img
