@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { IBeer } from "../IBeer";
 import { Link, useParams } from "react-router-dom";
+import "../../public/8979036078110.png";
 
 const BeerDetailPage = () => {
   const [beerDataDetail, setBeerDataDetail] = useState<IBeer | null>(null);

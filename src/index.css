@@ -19,10 +19,6 @@
   gap: 2vw;
 }
 
-.overview {
-  background-image: url("/public/jon-tyson-s2ryvZkG1Rk-unsplash.jpg");
-}
-
 img {
   display: flex;
 }

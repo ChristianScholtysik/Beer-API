@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { IBeer } from "../IBeer";
+import "../../public/8979036078110.png";
 
 interface IBeerProps {
   beer: IBeer;
@@ -59,8 +60,6 @@ const SingleBeer: React.FC<IBeerProps> = (props) => {
           </div>
         </div>
       </Link>
-      {/* <Nav />
-      <Footer /> */}
     </>
   );
 };

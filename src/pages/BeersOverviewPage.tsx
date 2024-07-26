@@ -1,6 +1,8 @@
 import AllBeers from "../components/AllBeers";
 
 import Nav from "../components/Nav";
+import "../../public/jon-tyson-s2ryvZkG1Rk-unsplash.jpg";
+import "./BeerOverviewPage.css";
 
 const BeersOverviewPage = () => {
   return (
