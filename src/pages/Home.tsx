@@ -2,35 +2,37 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { IBeer } from "../IBeer";
 
-import SingleBeer from "../components/SingleBeer";
-
 const Home = () => {
-  function getRandomBeer() {
-    const [_randomBeerData, setrandomBeerData] = useState<IBeer[] | null>(null);
-    const [randomBeer, setRandomBeer] = useState<IBeer | null>(null);
+  const [randomBeerData, setRandomBeerData] = useState<IBeer[] | null>(null);
+  const [randomBeer, setRandomBeer] = useState<IBeer | null>(null);
 
-    useEffect(() => {
-      fetch("https://api.sampleapis.com/beers/ale")
-        .then((res) => res.json())
-        .then((data) => {
-          setrandomBeerData(data);
-          const beersWithImages = data.filter((beer: IBeer) => beer.image);
-          if (beersWithImages.length > 0) {
-            const randomIndex = Math.floor(
-              Math.random() * beersWithImages.length
-            );
-            setRandomBeer(beersWithImages[randomIndex]);
-          }
-        })
-        .catch((err) => console.error("Fetch failed :-(", err));
-    }, []);
+  const getRandomBeer = () => {
+    if (randomBeerData) {
+      const beersWithImages = randomBeerData.filter(
+        (beer: IBeer) => beer.image
+      );
+      if (beersWithImages.length > 0) {
+        const randomIndex = Math.floor(Math.random() * beersWithImages.length);
+        setRandomBeer(beersWithImages[randomIndex]);
+      }
+    }
+  };
 
-    return (
-      <>
-        <section>{randomBeer && <SingleBeer beer={randomBeer} />}</section>
-      </>
-    );
-  }
+  useEffect(() => {
+    fetch("https://api.sampleapis.com/beers/ale")
+      .then((res) => res.json())
+      .then((data) => {
+        setRandomBeerData(data);
+        const beersWithImages = data.filter((beer: IBeer) => beer.image);
+        if (beersWithImages.length > 0) {
+          const randomIndex = Math.floor(
+            Math.random() * beersWithImages.length
+          );
+          setRandomBeer(beersWithImages[randomIndex]);
+        }
+      })
+      .catch((err) => console.error("Fetch failed :-(", err));
+  }, []);
 
   return (
     <div className="gap-4 justify-center h-screen home">
@@ -57,7 +59,7 @@ const Home = () => {
                   onClick={getRandomBeer}>
                   Random beer
                   <img src="/public/Homer Simpson (1).svg" alt="" />
-                </button>
+                </button>{" "}
               </Link>
             </div>
           </div>

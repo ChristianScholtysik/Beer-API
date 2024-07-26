@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "NotoSerif";
+  src: url(/public/Noto_Serif_Display/NotoSerifDisplay-VariableFont_wdth\,wght.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -12,7 +17,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2vw;
-  margin: 0, 10rem;
 }
 
 .overview {
@@ -44,8 +48,6 @@ img {
   background-size: cover;
 }
 
-.home {
-}
 .btn-homer {
   display: flex;
   flex-direction: row;
@@ -61,4 +63,27 @@ img {
 @font-face {
   font-family: "Simpsons";
   src: url("/public/simpsonfont/Simpsonfont\ DEMO.otf");
+}
+
+.card-title {
+  font-family: " NotoSerif";
+  font-size: 1.5rem;
+}
+
+.img-wrapper {
+  display: flex;
+}
+
+.hero-detail {
+  background-image: url("/public/green_beer.jpeg");
+}
+
+.h1-detail {
+  color: #acba70;
+}
+
+.img-overview {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
 }

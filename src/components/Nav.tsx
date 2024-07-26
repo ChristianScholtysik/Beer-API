@@ -8,7 +8,7 @@ const Nav = () => {
       flex justify-center">
         <button className="btn btn-ghost text-xl">
           <NavLink to="/">
-            <button className="btn  bg-lime-900 border-none text-white">
+            <button className="btn  bg-warning border-none text-white">
               <img src="/public/arrow_back.svg" alt="" />
               Back to Start
             </button>

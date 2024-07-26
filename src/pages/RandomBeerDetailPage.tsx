@@ -35,10 +35,10 @@ const RandomBeerDetailPage = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title text-slate-800 text-4xl font-serif">
+            <h2 className="card-title text-slate-800 text-5xl font-serif">
               {randomBeer?.name}
             </h2>
-            <div className="divider divider-warning text-slate-800 font-bold mt-4 mb-4">
+            <div className="divider divider-warning text-slate-800 font-bold mt-12 mb-8">
               Infos
             </div>
             <p className="text-slate-800 italic">
@@ -50,13 +50,13 @@ const RandomBeerDetailPage = () => {
             <div className="divider divider-warning text-slate-800 mt-8 mb-12">
               Rating
             </div>
-            <p className="text-slate-800 font-bold text-3xl font-serif">
+            <p className="text-slate-800 font-bold text-xl">
               Rating: {randomBeer?.rating.average.toFixed(2)}
             </p>
-            <p className="text-slate-800 text-xl mb-6">
+            <p className="text-slate-800 text-2xl mb-12">
               Reviews: {randomBeer?.rating.reviews.toFixed(2)}
             </p>
-            <div className="card bg-warning rounded-box grid h-20 flex-grow place-items-center text-white text-3xl font-bold font-serif">
+            <div className="card bg-orange-400 rounded-box grid h-20 flex-grow place-items-center text-white text-2xl font-bold">
               Price: {randomBeer?.price}
             </div>
 
