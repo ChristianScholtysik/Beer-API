@@ -3,6 +3,7 @@ import AllBeers from "../components/AllBeers";
 import Nav from "../components/Nav";
 import "../../public/jon-tyson-s2ryvZkG1Rk-unsplash.jpg";
 import "./BeerOverviewPage.css";
+import "../../public/wp3087080.jpg";
 
 const BeersOverviewPage = () => {
   return (

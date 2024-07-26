@@ -17,7 +17,6 @@ const AllBeers = () => {
     <>
       <section className="list">
         {allBeersData?.map((beer, index) =>
-          // <SingleBeer key={index} beer={beer} />
           beer.image ? <SingleBeer key={index} beer={beer} /> : null
         )}
       </section>
